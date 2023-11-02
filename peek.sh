@@ -1,8 +1,8 @@
-if [ -z "$2" ]; then
+if [[ -z $2 ]]; then
     set -- "$1" 3
 fi
 
-if [ "$(wc -l<"$1")" -le "$((2*$2))" ]; then
+if [[ $(wc -l<"$1") -le $((2*$2)) ]]; then
     echo "File contains less than $((2*$2)) lines. Full content of the "$1" is shown"
     cat "$1"
 else
